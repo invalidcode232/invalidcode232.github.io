@@ -1,0 +1,45 @@
+.p-header {
+    padding: 10px;
+    margin-left: 5vw;
+}
+.p-content {
+    display: block;
+    clear:left;
+    margin-left: 5vw;
+    margin-bottom: 250px;
+}
+
+.contacts {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.jumbotron-contact-link {
+    font-size: 25px;
+    color: #808080;
+}
+
+.showcase {
+    box-shadow: 0 20px 50px rgb(0 0 0 / 10%);
+    display:block;
+    width: 45%;
+    clear:left;
+}
+
+.showcase-content {
+    display: inline-block;
+    margin-left: 50px;
+}
+
+@media (max-width: 1200px) {
+    .showcase {
+        width: 70%;
+    }
+
+  .showcase-content {
+      padding: 20px;
+      margin-left: 0px;
+      display: block;
+      clear: left;
+   }
+}
