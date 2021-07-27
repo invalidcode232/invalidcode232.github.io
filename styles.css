@@ -43,3 +43,17 @@
       clear: left;
    }
 }
+
+.carousel-control .icon-prev, .carousel-control .icon-next {
+    font-size: 100px;
+    margin-top: -50px;
+    color: #000;
+}
+
+.c-control {
+    color: #000;
+}
+
+.carousel-controls {
+    margin-top: 20px;
+}
