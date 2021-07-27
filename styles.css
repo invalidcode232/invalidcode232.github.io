@@ -20,7 +20,6 @@
 }
 
 .showcase {
-    box-shadow: 0 20px 50px rgb(0 0 0 / 10%);
     display:block;
     width: 45%;
     clear:left;
@@ -31,7 +30,7 @@
     margin-left: 50px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
     .showcase {
         width: 70%;
     }
@@ -41,6 +40,12 @@
       margin-left: 0px;
       display: block;
       clear: left;
+   }
+}
+
+@media (max-width: 600px) {
+   .navbar-nav {
+       display:none;
    }
 }
 
