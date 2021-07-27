@@ -32,11 +32,11 @@
 
 @media (max-width: 1000px) {
     .showcase {
-        width: 70%;
+        width: 100%;
     }
 
   .showcase-content {
-      padding: 20px;
+      margin-top: 200px;
       margin-left: 0px;
       display: block;
       clear: left;
