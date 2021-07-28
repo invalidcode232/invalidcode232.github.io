@@ -2,6 +2,10 @@ html {
     scroll-behavior: smooth;
 }
 
+.p-container {
+    margin-bottom: 80px;
+}
+
 .p-header {
     padding: 10px;
     margin-left: 5vw;
@@ -10,7 +14,6 @@ html {
     display: block;
     clear:left;
     margin-left: 5vw;
-    margin-bottom: 250px;
 }
 
 .contacts {
@@ -40,7 +43,33 @@ html {
     margin-left: 50px;
 }
 
+.carousel-control .icon-prev, .carousel-control .icon-next {
+    font-size: 100px;
+    margin-top: 50px;
+    color: #000;
+}
+
+.c-control {
+    color: #000;
+}
+
+.carousel-controls {
+    margin-top: 20px;
+}
+
+.list-lg-inline {
+    vertical-align: top;
+    font-size: 18px;
+    display: inline-block;
+    margin-top: 15px;
+    margin-right: 100px;
+}
+
 @media (max-width: 1000px) {
+    .p-header {
+        margin-left: 10px;
+    }
+
     .showcase {
         width: 100%;
         margin-bottom: 30px;
@@ -62,18 +91,4 @@ html {
    .navbar-nav {
        display:none;
    }
-}
-
-.carousel-control .icon-prev, .carousel-control .icon-next {
-    font-size: 100px;
-    margin-top: -50px;
-    color: #000;
-}
-
-.c-control {
-    color: #000;
-}
-
-.carousel-controls {
-    margin-top: 20px;
 }
