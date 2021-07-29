@@ -57,6 +57,11 @@ html {
     margin-top: 20px;
 }
 
+.list-style-none {
+    list-style-type: none;
+}
+
+
 .list-lg-inline {
     vertical-align: top;
     font-size: 18px;
