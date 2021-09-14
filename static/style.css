@@ -1,0 +1,142 @@
+/** {*/
+/*    background-color: black;*/
+/*    font-family: 'Poppins', sans-serif;*/
+/*}*/
+
+.theme-dark {
+    --color-body: black;
+    --color-text: white;
+    --color-heading: #a3fdff;
+    --color-link: #5c8cff;
+    --color-social-hover: white;
+    --color-secondary: #6c757d;
+}
+
+
+/*.theme-light {*/
+/*    --color-body: black;*/
+/*    --color-text: white;*/
+/*    --color-heading: #a3fdff;*/
+/*    --color-link: #5c8cff;*/
+/*    --color-social-hover: white;*/
+/*    --color-secondary: #6c757d;*/
+/*}*/
+.theme-light {
+    --color-body: white;
+    --color-text: black;
+    --color-heading: #0093a3!important;
+    --color-link: #002c96!important;
+    --color-social-hover: #005896!important;
+    --color-secondary: #6c757d;
+}
+
+body {
+    background-color: var(--color-body);
+}
+
+.typed-cursor {
+    font-size: 100px;
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+
+.i-navbar {
+    padding: 1rem;
+}
+
+.i-navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--color-text);
+}
+
+/*.i-navbar-scroll {*/
+/*    background-color: #030f1a;*/
+/*}*/
+
+.i-nav-link {
+    color: var(--color-link);
+}
+
+.i-text-color {
+    color: var(--color-text);
+}
+
+.i-social-link {
+    font-size: 2rem;
+    color: var(--color-secondary);
+    animation: fadeInLeft 1s;
+}
+
+#socials {
+    margin-top: 4rem;
+}
+
+.i-social-link:hover {
+    text-decoration: none;
+    color: var(--color-social-hover);
+}
+
+#i-main-lead {
+    max-width: 40rem;
+    animation: fadeInUp ease 1s;
+}
+
+#i-svg-container {
+    /*animation: fade-in ease 2s;*/
+    animation: float ease-in-out 3s infinite;
+}
+
+#i-main-header {
+    color: var(--color-heading);
+}
+
+#i-learn-btn {
+    animation: fadeInUp ease 1.5s;
+}
+
+.i-light {
+    color: white!important;
+}
+
+.i-light-text {
+    color: black!important;
+}
+
+@media (max-width: 1000px) {
+    #i-svg-container {
+        display: none;
+    }
+    #i-main-container {
+        flex: none;
+        max-width: none;
+    }
+    #i-main-lead {
+        max-width: none;
+    }
+
+    #i-main-header {
+        font-size: 4rem;
+    }
+
+    #i-main-sec-header {
+        font-size: 1.5rem;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }
+}
