@@ -16,7 +16,9 @@ function toggle_theme() {
 }
 
 function control_theme() {
-  document.documentElement.className = localStorage.getItem("theme") || "theme-dark";
+  theme = localStorage.getItem("theme") || "theme-dark";
+  document.documentElement.className = theme;
+  document.getElementById("theme-switcher").checked = theme !== "theme-dark";
 }
 
 control_theme();
