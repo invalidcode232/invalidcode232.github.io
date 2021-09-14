@@ -39,15 +39,61 @@ body {
 
 .i-social-link {
     font-size: 2rem;
-    color: white;
+    color: #6c757d;
+}
+
+#socials {
+    margin-top: 4rem;
 }
 
 .i-social-link:hover {
     text-decoration: none;
+    color: white;
+}
+
+#i-main-lead {
+    max-width: 40rem;
+    animation: fade-in ease 1s;
+}
+
+#i-svg-container {
+    animation: fade-in ease 2s;
+}
+
+#i-main-header {
+    color:#a3fdff;
+}
+
+#i-learn-btn {
+    animation: fade-in ease 1s;
 }
 
 @media (max-width: 1000px) {
-    #i-code-svg {
+    #i-svg-container {
         display: none;
+    }
+    #i-main-container {
+        flex: none;
+        max-width: none;
+    }
+    #i-main-lead {
+        max-width: none;
+    }
+
+    #i-main-header {
+        font-size: 4rem;
+    }
+
+    #i-main-sec-header {
+        font-size: 1.5rem;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
