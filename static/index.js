@@ -7,9 +7,8 @@ const typed = new Typed(".typed", {
 document.getElementById("theme-switcher").checked = localStorage.getItem("theme") !== "theme-dark";
 
 function toggle_theme() {
-  let theme = localStorage.getItem("theme") || "theme-dark";
-
-  theme = theme === "theme-dark" ? "theme-light" : "theme-dark";
+  let enabled = document.getElementById("theme-switcher").checked;
+  let theme = enabled ? "theme-light" : "theme-dark"
 
   localStorage.setItem("theme", theme);
 
