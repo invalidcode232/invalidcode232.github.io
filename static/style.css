@@ -7,6 +7,14 @@ body {
     background-color: black;
 }
 
+.typed-cursor {
+    font-size: 100px;
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+
 .i-navbar {
     padding: 1rem;
 }
@@ -27,4 +35,19 @@ body {
 
 .i-nav-link {
     color: #5c8cff;
+}
+
+.i-social-link {
+    font-size: 2rem;
+    color: white;
+}
+
+.i-social-link:hover {
+    text-decoration: none;
+}
+
+@media (max-width: 1000px) {
+    #i-code-svg {
+        display: none;
+    }
 }
