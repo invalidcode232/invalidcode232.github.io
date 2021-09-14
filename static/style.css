@@ -40,6 +40,7 @@ body {
 .i-social-link {
     font-size: 2rem;
     color: #6c757d;
+    animation: fadeInLeft 1s;
 }
 
 #socials {
@@ -53,11 +54,12 @@ body {
 
 #i-main-lead {
     max-width: 40rem;
-    animation: fade-in ease 1s;
+    animation: fadeInUp ease 1s;
 }
 
 #i-svg-container {
-    animation: fade-in ease 2s;
+    /*animation: fade-in ease 2s;*/
+    animation: float ease-in-out 3s infinite;
 }
 
 #i-main-header {
@@ -65,7 +67,7 @@ body {
 }
 
 #i-learn-btn {
-    animation: fade-in ease 1s;
+    animation: fadeInUp ease 1.5s;
 }
 
 @media (max-width: 1000px) {
@@ -96,4 +98,10 @@ body {
     100% {
         opacity: 1;
     }
+}
+
+@keyframes float {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }
 }
