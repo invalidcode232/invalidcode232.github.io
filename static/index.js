@@ -1,4 +1,4 @@
-const typed = new Typed(".typed", {
+new Typed(".typed", {
   typeSpeed: 80,
   strings: ["Developer", "Student", "Gamer"],
   loop: true
@@ -22,3 +22,17 @@ function control_theme() {
 }
 
 control_theme();
+
+let observer = new IntersectionObserver((e) => {
+  let intersect = e[0].isIntersecting;
+
+  intersect ? e[0].target.classList.add("i-fade-up-1") : e[0].target.classList.remove("i-fade-up-1");
+}, {
+  rootMargin: "80px"
+})
+
+let elements = document.querySelectorAll(".i-observe-anim-fade");
+
+elements.forEach((e) => {
+  observer.observe(e);
+})

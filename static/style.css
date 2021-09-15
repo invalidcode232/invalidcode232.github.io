@@ -3,6 +3,10 @@
 /*    font-family: 'Poppins', sans-serif;*/
 /*}*/
 
+html {
+    scroll-behavior: smooth;
+}
+
 .theme-dark {
     --color-body: black;
     --color-text: white;
@@ -64,10 +68,25 @@ body {
     color: var(--color-text);
 }
 
+.i-fade-left-1 {
+    animation: fadeInLeft 1s;
+}
+
+.i-fade-left-2 {
+    animation: fadeInLeft 1.5s;
+}
+
+.i-fade-up-1 {
+    animation: fadeInUp ease 1s;
+}
+
+.i-fade-up-2 {
+    animation: fadeInUp ease 1.5s;
+}
+
 .i-social-link {
     font-size: 2rem;
     color: var(--color-secondary);
-    animation: fadeInLeft 1s;
 }
 
 #socials {
@@ -81,20 +100,14 @@ body {
 
 #i-main-lead {
     max-width: 40rem;
-    animation: fadeInUp ease 1s;
 }
 
 #i-svg-container {
-    /*animation: fade-in ease 2s;*/
     animation: float ease-in-out 3s infinite;
 }
 
 #i-main-header {
     color: var(--color-heading);
-}
-
-#i-learn-btn {
-    animation: fadeInUp ease 1.5s;
 }
 
 .i-light {
