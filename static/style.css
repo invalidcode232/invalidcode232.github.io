@@ -151,6 +151,10 @@ body {
     #i-main-sec-header {
         font-size: 1.5rem;
     }
+
+    #i-learn-btn {
+        justify-content: center;
+    }
 }
 
 @keyframes fade-in {
