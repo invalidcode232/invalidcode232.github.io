@@ -8,6 +8,7 @@ html {
 }
 
 .theme-dark {
+    --color-navbar: #181818;
     --color-body: #1E1E1E;
     --color-text: white;
     --color-heading: #a3fdff;
@@ -26,6 +27,7 @@ html {
 /*    --color-secondary: #6c757d;*/
 /*}*/
 .theme-light {
+    --color-navbar: white;
     --color-body: white;
     --color-text: black;
     --color-heading: #0093a3!important;
@@ -55,7 +57,7 @@ body {
     background:
     linear-gradient(to right,#1e5799 0,#f300ff 50%,#e0ff00 100%)
       bottom
-      #181818   
+      var(--color-navbar) 
       no-repeat;
       
     background-size:100% 1px;
