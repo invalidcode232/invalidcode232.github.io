@@ -4,7 +4,6 @@
     <list default="true" id="df1e21b7-e558-40b6-ab94-25cbc99ed884" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,6 +22,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="1y5BWJrcgD1LaQvF6h1vgKw7Rcn" />
   <component name="ProjectViewState">
@@ -51,6 +53,8 @@
       <workItem from="1631604801738" duration="2399000" />
       <workItem from="1631607261051" duration="8644000" />
       <workItem from="1631667803084" duration="5106000" />
+      <workItem from="1642814880441" duration="13000" />
+      <workItem from="1642814906581" duration="22000" />
     </task>
     <servers />
   </component>
@@ -67,6 +71,5 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

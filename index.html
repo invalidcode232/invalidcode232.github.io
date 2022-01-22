@@ -29,7 +29,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm i-navbar" id='navbar'>
+    <nav class="navbar navbar-expand-sm i-navbar fixed-top" id='navbar'>
         <div class="container-fluid">
             <div class="d-flex justify-content-between">
                 <div class="i-navbar-brand">invalidcode</div>
@@ -65,7 +65,7 @@
         </div>
     </nav>
 
-    <div class="container i-text-color mt-5 page">
+    <div class="container i-text-color page">
         <div class="row">
             <div class="col" id="i-main-container">
                 <h3 id="i-main-sec-header">Hello there! I am a</h3>
@@ -94,9 +94,9 @@
     </div>
 
     <div class="container i-text-color i-fade-up-1 page">
-        <h1 class="i-observe-anim-fade">My works</h1>
+        <h1 class="i-observe-anim-fade" id='my-works'>My works</h1>
         <div class='i-observe-anim-fade mt-5'>
-            <div class='carousel slide' data-ride='carousel' id='my-works'>
+            <div class='carousel slide' data-ride='carousel' id='works-carousel'>
                 <div class='carousel-inner'>
                     <div class='carousel-item active'>
                         <div class='row'>
@@ -115,14 +115,13 @@
                                         <span>Node.js</span>
                                     </div>
                                 </div>
-                                <div class='carousel-controls'>
-                                    <a class="carousel-control-prev" href="#my-works" role="button" data-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="sr-only">Previous</span>
+                                <div class='ml-2 mt-2'>
+                                    <a href="#works-carousel" role="button" data-slide="prev" class="mr-4 i-text-color">
+                                        <i class="fa fa-arrow-left"></i>
                                     </a>
-                                    <a class="carousel-control-next" href="#my-works" role="button" data-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="sr-only">Next</span>
+
+                                    <a href="#works-carousel" role="button" data-slide="next" class="mr-4 i-text-color">
+                                        <i class="fa fa-arrow-right"></i>
                                     </a>
                                 </div>
                             </div>
@@ -131,11 +130,11 @@
 
                     <div class='carousel-item'>
                         <div class='row'>
-                            <div class='col-8'>
+                            <div class='col-8' id='image'>
                                 <img alt='steam-id-scraper' width="100%"
                                     src='https://camo.githubusercontent.com/350d3624dead73dc896471abeeb5d31efc71cecb81df508e6b7159963c8bb12c/68747470733a2f2f63646e2e646973636f72646170702e636f6d2f6174746163686d656e74732f3730363132393530343638323234363134362f3835323132383733343333363338353034342f73732e706e67'>
                             </div>
-                            <div class='col-4'>
+                            <div class='col-4' id='desc'>
                                 <h4>Steam ID scraper</h4>
                                 <p class='text-secondary'>
                                     A simple console app to automatically scrape Steam IDs
@@ -146,14 +145,13 @@
                                         <span>Node.js</span>
                                     </div>
                                 </div>
-                                <div class='carousel-controls'>
-                                    <a class="carousel-control-prev" href="#my-works" role="button" data-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="sr-only">Previous</span>
+                                <div class='ml-2 mt-2'>
+                                    <a href="#works-carousel" role="button" data-slide="prev" class="mr-4 i-text-color">
+                                        <i class="fa fa-arrow-left"></i>
                                     </a>
-                                    <a class="carousel-control-next" href="#my-works" role="button" data-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="sr-only">Next</span>
+
+                                    <a href="#works-carousel" role="button" data-slide="next" class="mr-4 i-text-color">
+                                        <i class="fa fa-arrow-right"></i>
                                     </a>
                                 </div>
                             </div>
