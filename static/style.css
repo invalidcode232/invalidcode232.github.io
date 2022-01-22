@@ -165,6 +165,23 @@ body {
     #i-learn-btn {
         justify-content: center;
     }
+
+    .i-c-image {
+        max-width: 100%!important;
+        flex: none;
+    }
+
+    .i-c-desc {
+        max-width: 100%!important;
+        margin-top: 2rem;
+        flex: none;
+        font-size: 1rem;
+    }
+
+    .page {
+        height: 70vh;
+        margin-top: 10vh;
+    }
 }
 
 @keyframes fade-in {
