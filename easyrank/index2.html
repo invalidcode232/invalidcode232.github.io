@@ -30,8 +30,11 @@
     .welcomename {
       margin-left: 15px;
     }
-  </style>
 
+    .is-active {
+      display: block!important;
+    }
+  </style>
 <body>
   <div>
     <nav class="lg:hidden py-6 px-6 border-b">
@@ -39,8 +42,8 @@
         <a class="text-2xl font-semibold" href="https://invalid.codes/easyrank/#">
           <img class="h-10" src="./Document_files/artemis-logo-light.svg" alt="" width="auto">
         </a>
-        <button class="navbar-burger flex items-center rounded focus:outline-none">
-          <svg class="text-white bg-indigo-500 hover:bg-indigo-600 block h-8 w-8 p-2 rounded" viewBox="0 0 20 20"
+        <button class="navbar-burger flex items-center rounded focus:outline-none" id='hamburger'>
+          <svg class="text-white bg-neutral-600 hover:bg-indigo-600 block h-8 w-8 p-2 rounded" viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg" fill="currentColor">
             <title>Mobile menu</title>
             <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
@@ -48,6 +51,25 @@
         </button>
       </div>
     </nav>
+    <div class='hidden lg:hidden' id='mobile-nav'>
+      <div class='flex flex-col grid place-items-center'>
+        <a class='block text-white p-4' href='https://invalid.codes/easyrank/#'>
+          Products
+        </a>
+        <a class='block text-white p-4' href='https://invalid.codes/easyrank/#'>
+          Cloud configs
+        </a>
+        <a class='block text-white p-4' href='https://invalid.codes/easyrank/#'>
+          Settings
+        </a>
+        <a class='block text-white p-4' href='https://invalid.codes/easyrank/#'>
+          Discord
+        </a>
+        <a class='block text-white p-4' href='https://invalid.codes/easyrank/#'>
+          Log out
+        </a>
+      </div>
+    </div>
     <div class="hidden lg:block navbar-menu relative z-50">
       <nav
         class="fixed top-0 left-0 bottom-0 flex flex-col w-3/4 lg:w-80 sm:max-w-xs pt-6 pb-8 bg-neutral-800 border-r overflow-y-auto">
@@ -362,5 +384,11 @@
     </div>
   </div>
 </body>
+<script>
+  // When hamburger button is clicked, toggle the class "is-active"
+  document.querySelector("#hamburger").addEventListener("click", function() {
+    document.querySelector('#mobile-nav').classList.toggle("is-active");
+  });
+</script>
 
 </html>
