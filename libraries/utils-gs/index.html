@@ -44,7 +44,7 @@
 <div id="content">
 
 <h1>Module <code>utils</code></h1>
-<p>contains</p>
+<p>Checks if a value is in a table</p>
 <p></p>
 
 
@@ -52,51 +52,59 @@
 <table class="function_list">
 	<tr>
 	<td class="name" nowrap><a href="#vectorize">vectorize (table)</a></td>
-	<td class="summary">vectorize</td>
+	<td class="summary">Converts a table to a vector</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#eye_pos">eye_pos (ent)</a></td>
-	<td class="summary">eye_pos</td>
+	<td class="summary">Gets eye position</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#extrapolate">extrapolate (ent1, ent2, hb)</a></td>
-	<td class="summary">extrapolate</td>
+	<td class="summary">Extrapolates player position</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#ent_dist">ent_dist (ent1, ent2)</a></td>
-	<td class="summary"></td>
+	<td class="summary">Gets distance between two entities</td>
 	</tr>
 	<tr>
-	<td class="name" nowrap><a href="#get_damage">get_damage (shooter, victim, hb)</a></td>
-	<td class="summary">get_damage</td>
+	<td class="name" nowrap><a href="#get_damage">get_damage (shooter, victim, hb, ticks)</a></td>
+	<td class="summary">Gets predicted bullet damage</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#is_crouching">is_crouching (ent)</a></td>
-	<td class="summary">is_crouching</td>
+	<td class="summary">Checks if an entity is crouching</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#is_in_air">is_in_air (ent)</a></td>
-	<td class="summary">is_in_air</td>
+	<td class="summary">Check if an entity is in air</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#get_velocity">get_velocity (ent)</a></td>
-	<td class="summary">get_velocity</td>
+	<td class="summary">Gets an entity's velocity</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#get_pstate">get_pstate (ent)</a></td>
-	<td class="summary">get_pstate</td>
+	<td class="summary">Gets an entity's current movement state</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#is_throwable">is_throwable (ent)</a></td>
-	<td class="summary">is_throwable</td>
+	<td class="summary">Check if a weapon is a throwable</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#get_max_speed">get_max_speed (ent, wpn)</a></td>
-	<td class="summary">get_max_speed</td>
+	<td class="summary">Get maximum player speed</td>
 	</tr>
 	<tr>
 	<td class="name" nowrap><a href="#multicolored_text">multicolored_text (x, y, flags, centered, spacing, data)</a></td>
-	<td class="summary">multicolored_text</td>
+	<td class="summary">Renders a multicolored string</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#anim_speed">anim_speed (speed)</a></td>
+	<td class="summary">Animates from 0 to 1 to 0</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#table_visible">table_visible (table, visible)</a></td>
+	<td class="summary">Sets the visibility of all the elements in a table</td>
 	</tr>
 </table>
 
@@ -112,7 +120,7 @@
     <strong>vectorize (table)</strong>
     </dt>
     <dd>
-    vectorize
+    Converts a table to a vector
 
 
     <h3>Parameters:</h3>
@@ -137,7 +145,7 @@
     <strong>eye_pos (ent)</strong>
     </dt>
     <dd>
-    eye_pos
+    Gets eye position
 
 
     <h3>Parameters:</h3>
@@ -162,7 +170,7 @@
     <strong>extrapolate (ent1, ent2, hb)</strong>
     </dt>
     <dd>
-    extrapolate
+    Extrapolates player position
 
 
     <h3>Parameters:</h3>
@@ -193,7 +201,7 @@
     <strong>ent_dist (ent1, ent2)</strong>
     </dt>
     <dd>
-
+    Gets distance between two entities
 
 
     <h3>Parameters:</h3>
@@ -218,10 +226,10 @@
 </dd>
     <dt>
     <a name = "get_damage"></a>
-    <strong>get_damage (shooter, victim, hb)</strong>
+    <strong>get_damage (shooter, victim, hb, ticks)</strong>
     </dt>
     <dd>
-    get_damage
+    Gets predicted bullet damage
 
 
     <h3>Parameters:</h3>
@@ -233,6 +241,9 @@
          number
         </li>
         <li><span class="parameter">hb</span>
+         number
+        </li>
+        <li><span class="parameter">ticks</span>
          number
         </li>
     </ul>
@@ -252,7 +263,7 @@
     <strong>is_crouching (ent)</strong>
     </dt>
     <dd>
-    is_crouching
+    Checks if an entity is crouching
 
 
     <h3>Parameters:</h3>
@@ -277,7 +288,7 @@
     <strong>is_in_air (ent)</strong>
     </dt>
     <dd>
-    is_in_air
+    Check if an entity is in air
 
 
     <h3>Parameters:</h3>
@@ -302,7 +313,7 @@
     <strong>get_velocity (ent)</strong>
     </dt>
     <dd>
-    get_velocity
+    Gets an entity's velocity
 
 
     <h3>Parameters:</h3>
@@ -327,7 +338,7 @@
     <strong>get_pstate (ent)</strong>
     </dt>
     <dd>
-    get_pstate
+    Gets an entity's current movement state
 
 
     <h3>Parameters:</h3>
@@ -352,7 +363,7 @@
     <strong>is_throwable (ent)</strong>
     </dt>
     <dd>
-    is_throwable
+    Check if a weapon is a throwable
 
 
     <h3>Parameters:</h3>
@@ -377,7 +388,7 @@
     <strong>get_max_speed (ent, wpn)</strong>
     </dt>
     <dd>
-    get_max_speed
+    Get maximum player speed
 
 
     <h3>Parameters:</h3>
@@ -405,7 +416,7 @@
     <strong>multicolored_text (x, y, flags, centered, spacing, data)</strong>
     </dt>
     <dd>
-    multicolored_text
+    Renders a multicolored string
 
 
     <h3>Parameters:</h3>
@@ -440,6 +451,59 @@
 
 
 </dd>
+    <dt>
+    <a name = "anim_speed"></a>
+    <strong>anim_speed (speed)</strong>
+    </dt>
+    <dd>
+    Animates from 0 to 1 to 0
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">speed</span>
+         number
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        number
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "table_visible"></a>
+    <strong>table_visible (table, visible)</strong>
+    </dt>
+    <dd>
+    Sets the visibility of all the elements in a table
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">table</span>
+         table
+        </li>
+        <li><span class="parameter">visible</span>
+         boolean
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        void
+    </ol>
+
+
+
+
+</dd>
 </dl>
 
 
@@ -447,7 +511,7 @@
 </div> <!-- id="main" -->
 <div id="about">
 <i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
-<i style="float:right;">Last updated 2022-02-08 18:12:43 </i>
+<i style="float:right;">Last updated 2022-02-09 07:38:33 </i>
 </div> <!-- id="about" -->
 </div> <!-- id="container" -->
 </body>
