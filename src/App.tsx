@@ -26,7 +26,10 @@ function App() {
               Mail: <a href="mailto:mail@invalidcode.me">mail@invalidcode.me</a>
             </li>
             <li>
-              Telegram: <a href="">@sungardaJ</a>
+              Matrix:{" "}
+              <a href="https://matrix.to/#/@invalidcode:matrix.org">
+                @invalidcode:matrix.org
+              </a>
             </li>
           </ul>
         </article>
