@@ -10,7 +10,7 @@ export default function Header() {
           text={"Github"}
         />
         <NavigationLink
-          href={"https://www.linkedin.com/in/james-sungarda-20a735224/"}
+          href={"https://www.linkedin.com/in/james-sungarda/"}
           text={"Linkedin"}
         />
       </div>
