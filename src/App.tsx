@@ -29,8 +29,8 @@ function App() {
         </div>
         <article className="prose prose-p:text-gray-200 prose-h3:text-gray-100 prose-a:text-blue-400 prose-li:text-gray-100">
           <p>
-            I am currently a first year undergraduate student studying Bachelor
-            of Engineering at The University of Hong Kong.
+            I am currently a first year undergraduate student studying Computer
+            Science at The University of Hong Kong.
           </p>
 
           <h3>Contact me</h3>
