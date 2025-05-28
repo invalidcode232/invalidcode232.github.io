@@ -1,18 +1,6 @@
 import "./App.css";
 import Header from "./components/header";
-
-const CONTACTS = [
-  {
-    name: "Mail",
-    text: "mail@invalidcode.me",
-    href: "mailto:mail@invalidcode.me",
-  },
-  {
-    name: "Matrix",
-    text: "@invalidcode:matrix.org",
-    href: "https://matrix.to/#/@invalidcode:matrix.org",
-  },
-];
+import CONTACTS, { Contact } from "./contacts";
 
 function App() {
   return (
@@ -35,7 +23,7 @@ function App() {
 
           <h3>Contact me</h3>
           <ul>
-            {CONTACTS.map((contact) => (
+            {CONTACTS.map((contact: Contact) => (
               <li key={contact.name}>
                 {contact.name}: <a href={contact.href}>{contact.text}</a>
               </li>
