@@ -5,7 +5,6 @@ import CONTACTS, { Contact } from "./contacts";
 function App() {
   return (
     <>
-      <div className="h-screen bg-slate-900 lg:px-96 lg:pt-20 px-10 pt-16">
         <Header />
         <div>
           <span className="text-3xl font-semibold inline-block mr-3 text-white">
@@ -30,7 +29,6 @@ function App() {
             ))}
           </ul>
         </article>
-      </div>
     </>
   );
 }

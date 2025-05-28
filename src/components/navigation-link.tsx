@@ -11,14 +11,13 @@ type Props = {
 export default function NavigationLink(props: Props) {
   return (
     <span>
-      <a
-        href={props.href}
+      <Link
+        to={props.href}
         className="text-blue-400 hover:underline mx-2"
         target={props.isPath ? undefined : "_blank"}
       >
-        {props.isPath && <Link to={props.href}>{props.text}</Link>}
-        {!props.isPath && props.text}
-      </a>
+        {props.text}
+      </Link>
     </span>
   );
 }
