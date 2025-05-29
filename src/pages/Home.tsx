@@ -53,7 +53,7 @@ function Home() {
                 <a
                     className="bg-slate-700 text-white px-6 py-2 rounded-md md:min-w-[200px] min-w-full hover:bg-slate-600 hover:cursor-pointer flex items-center justify-center mb-3 md:mb-0"
                     aria-label="download cv"
-                    href="/public/cv.pdf"
+                    href="https://github.com/invalidcode232/invalidcode232.github.io/raw/refs/heads/main/public/cv.pdf"
                     target="_blank"
                 >
                     <FaFile className="mr-2" />
