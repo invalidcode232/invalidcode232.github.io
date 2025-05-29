@@ -1,14 +1,27 @@
-import { useRef, useState } from "react";
-import { Commands } from "../modules/terminal-objects";
+import { useMemo, useRef, useState, useEffect } from "react";
+import { OutputHistory } from "../modules/terminal-objects";
 import TerminalHandler from "../modules/terminal-handler";
 
 export default function Terminal() {
     const PROMPT = "guest@portfolio:~$";
 
     const [input, setInput] = useState("");
-    const [outputHistory, setOutputHistory] = useState<string[]>([]);
+    const [outputHistory, setOutputHistory] = useState<OutputHistory[]>([]);
     const inputRef = useRef<HTMLInputElement>(null);
-    const THandler = new TerminalHandler(setOutputHistory);
+    const outputContainerRef = useRef<HTMLDivElement>(null);
+
+    const THandler = useMemo(() => {
+        const handler = new TerminalHandler(setOutputHistory);
+        handler.sendSystemMessage();
+        return handler;
+    }, []);
+
+    useEffect(() => {
+        if (outputContainerRef.current) {
+            outputContainerRef.current.scrollTop =
+                outputContainerRef.current.scrollHeight;
+        }
+    }, [outputHistory]);
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setInput(e.target.value);
@@ -18,11 +31,7 @@ export default function Terminal() {
         e.preventDefault();
         if (input.trim() === "") return;
 
-        const [command, ...args] = input.trim().split(" ");
-        THandler.handleCommand({
-            command: command as Commands,
-            args,
-        });
+        THandler.handleCommand(input);
         setInput("");
 
         inputRef.current!.value = "";
@@ -30,13 +39,31 @@ export default function Terminal() {
     };
 
     return (
-        <div className="bg-black rounded-lg p-4 text-gray-200 font-mono">
-            {outputHistory.map((output, index) => (
-                <div key={index}>{output}</div>
-            ))}
+        <div className="bg-black rounded-lg p-4 text-sm text-gray-200 font-mono mb-4 flex flex-col h-full">
+            <div
+                ref={outputContainerRef}
+                className="flex-1 overflow-y-auto mb-2"
+            >
+                {outputHistory.map((output) => (
+                    <div key={output.id} className="py-2">
+                        {output.prompt !== null && (
+                            <span className="block font-semibold">
+                                <span className="text-orange-400">{">"}</span>{" "}
+                                {output.prompt}
+                            </span>
+                        )}
+                        <span className="whitespace-pre-wrap">
+                            {output.content}
+                        </span>
+                    </div>
+                ))}
+            </div>
 
-            <form className="flex items-center" onSubmit={handleSubmit}>
-                <label htmlFor="terminal-input" className="text-gray-400 mr-2">
+            <form onSubmit={handleSubmit} className="flex-shrink-0">
+                <label
+                    htmlFor="terminal-input"
+                    className="text-gray-400 mr-2 w-auto"
+                >
                     {PROMPT}
                 </label>
                 <input

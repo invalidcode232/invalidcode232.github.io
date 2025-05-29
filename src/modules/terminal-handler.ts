@@ -1,4 +1,8 @@
-import { Commands } from "./terminal-objects";
+import SYSTEM_MESSAGE, {
+    Commands,
+    OutputHistory,
+    OutputHistoryType,
+} from "./terminal-objects";
 
 export interface TerminalInput {
     command: Commands;
@@ -6,38 +10,59 @@ export interface TerminalInput {
 }
 
 class TerminalHandler {
-    setOutputHistory: React.Dispatch<React.SetStateAction<string[]>>;
+    setOutputHistory: React.Dispatch<React.SetStateAction<OutputHistory[]>>;
 
     constructor(
-        setOutputHistory: React.Dispatch<React.SetStateAction<string[]>>,
+        setOutputHistory: React.Dispatch<React.SetStateAction<OutputHistory[]>>,
     ) {
         this.setOutputHistory = setOutputHistory;
     }
 
-    private appendOutput(output: string) {
-        this.setOutputHistory((outputs) => [...outputs, output]);
+    private addOutput(
+        prompt: string | null,
+        content: string,
+        type: OutputHistoryType = OutputHistoryType.INFO,
+    ) {
+        const newOutput: OutputHistory = {
+            id: crypto.randomUUID(),
+            prompt,
+            content,
+            type,
+        };
+
+        this.setOutputHistory((outputs) => [...outputs, newOutput]);
     }
 
-    handleCommand(input: TerminalInput) {
-        const { command, args } = input;
+    sendSystemMessage() {
+        this.addOutput(null, SYSTEM_MESSAGE);
+    }
+
+    handleCommand(input: string) {
+        const [command, ...args] = input.trim().split(" ");
 
         switch (command) {
             case Commands.HELP:
-                this.appendOutput("Available commands: help, clear, echo");
+                this.addOutput(
+                    input,
+                    "Available commands: help, clear, echo, system",
+                );
                 break;
             case Commands.CLEAR:
                 this.setOutputHistory([]);
                 break;
             case Commands.ECHO:
                 if (args.length === 0) {
-                    this.appendOutput("Usage: echo <message>");
+                    this.addOutput(input, "Usage: echo <message>");
                 } else {
-                    this.appendOutput(args.join(" "));
+                    this.addOutput(input, args.join(" "));
                 }
 
                 break;
+            case Commands.SYSTEM:
+                this.addOutput(input, SYSTEM_MESSAGE);
+                break;
             default:
-                this.appendOutput(`Unknown command: ${command}`);
+                this.addOutput(input, `Unknown command: ${command}`);
                 break;
         }
     }
