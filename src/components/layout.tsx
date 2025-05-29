@@ -2,12 +2,12 @@ import { Outlet } from "react-router";
 import Header from "./header";
 
 export default function Layout() {
-  return (
-    <div className="min-h-screen bg-slate-900 2xl:px-80 2xl:pt-20 xl:px-64 xl:pt-16 lg:px-40 md:px-32 px-10 pt-14">
-      <Header />
-      <main className="prose prose-p:text-gray-200 prose-h3:text-gray-100 prose-a:text-blue-400 prose-li:text-gray-100">
-        <Outlet />
-      </main>
-    </div>
-  );
-} 
+    return (
+        <div className="h-screen py-10 bg-slate-900 2xl:px-72 2xl:pt-20 xl:px-60 xl:pt-16 lg:px-40 md:px-32 px-8 pt-14 flex flex-col">
+            <Header />
+            <main className="text-gray-200 flex-1">
+                <Outlet />
+            </main>
+        </div>
+    );
+}
