@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@layer components {
+    .prose {
+        max-width: 100%;
+    }
+}
