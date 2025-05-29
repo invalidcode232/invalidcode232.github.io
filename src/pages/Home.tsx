@@ -1,3 +1,4 @@
+import { FaEnvelope, FaFile } from "react-icons/fa6";
 import CONTACTS, { Contact } from "../include/contacts";
 import { Link } from "react-router";
 
@@ -48,18 +49,22 @@ function Home() {
                 </p>
             </section>
 
-            <section className="my-8">
+            <section className="my-8 flex flex-col items-center md:flex-row md:items-center md:justify-start">
                 <button
-                    className="bg-slate-700 mr-4 text-white px-6 py-2 rounded-md min-w-[150px] hover:bg-slate-600 hover:cursor-pointer"
+                    className="bg-slate-700 text-white px-6 py-2 rounded-md md:min-w-[200px] min-w-full hover:bg-slate-600 hover:cursor-pointer flex items-center justify-center mb-3 md:mb-0"
                     aria-label="download cv"
                 >
+                    <FaFile className="mr-2" />
                     Download CV
                 </button>
-                <span className="text-gray-500">or</span>
+                <span className="text-gray-500 md:mx-4 md:block hidden">
+                    or
+                </span>
                 <button
-                    className="bg-slate-700 ml-4 text-white px-6 py-2 rounded-md min-w-[150px] hover:bg-slate-600 hover:cursor-pointer"
+                    className="bg-slate-700 text-white px-6 py-2 rounded-md md:min-w-[200px] min-w-full hover:bg-slate-600 hover:cursor-pointer flex items-center justify-center"
                     aria-label="download cv"
                 >
+                    <FaEnvelope className="mr-2" />
                     Email me
                 </button>
             </section>
