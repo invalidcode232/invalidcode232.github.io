@@ -50,23 +50,26 @@ function Home() {
             </section>
 
             <section className="my-8 flex flex-col items-center md:flex-row md:items-center md:justify-start">
-                <button
+                <a
                     className="bg-slate-700 text-white px-6 py-2 rounded-md md:min-w-[200px] min-w-full hover:bg-slate-600 hover:cursor-pointer flex items-center justify-center mb-3 md:mb-0"
                     aria-label="download cv"
+                    href="/public/cv.pdf"
+                    target="_blank"
                 >
                     <FaFile className="mr-2" />
                     Download CV
-                </button>
+                </a>
                 <span className="text-gray-500 md:mx-4 md:block hidden">
                     or
                 </span>
-                <button
+                <a
                     className="bg-slate-700 text-white px-6 py-2 rounded-md md:min-w-[200px] min-w-full hover:bg-slate-600 hover:cursor-pointer flex items-center justify-center"
                     aria-label="download cv"
+                    href="mailto:mail@invalidcode.me"
                 >
                     <FaEnvelope className="mr-2" />
                     Email me
-                </button>
+                </a>
             </section>
 
             <section aria-label="contact">
