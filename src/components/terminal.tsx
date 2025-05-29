@@ -39,7 +39,7 @@ export default function Terminal() {
     };
 
     return (
-        <div className="bg-black rounded-lg p-4 text-sm text-gray-200 font-mono mb-4 flex flex-col h-full">
+        <div className="max-h-[80vh] overflow-scroll bg-black rounded-lg p-4 text-sm text-gray-200 font-mono mb-4 flex flex-col h-full">
             <div
                 ref={outputContainerRef}
                 className="flex-1 overflow-y-auto mb-2"
