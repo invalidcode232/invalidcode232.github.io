@@ -11,10 +11,10 @@ const CONTACTS: Contact[] = [
     href: "mailto:mail@invalidcode.me",
   },
   {
-    name: "Matrix",
-    text: "@invalidcode:matrix.org",
-    href: "https://matrix.to/#/@invalidcode:matrix.org",
-  },
+    name: "Linkedin",
+    text: "James Sungarda",
+    href: "https://www.linkedin.com/in/james-sungarda/",
+  }
 ];
 
 export default CONTACTS; 

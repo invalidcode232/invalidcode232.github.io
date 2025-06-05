@@ -84,6 +84,8 @@ function Home() {
                             <a
                                 href={contact.href}
                                 className="text-blue-400 hover:underline"
+                                target="_blank"
+                                rel="noopener noreferrer"
                             >
                                 {contact.text}
                             </a>
