@@ -40,7 +40,7 @@ export default function Terminal() {
     };
 
     return (
-        <div className="bg-black rounded-lg p-4 text-sm text-gray-200 font-mono mb-2 flex flex-col h-full">
+        <div className="bg-black rounded-lg p-4 text-sm text-gray-200 font-mono mb-2 flex flex-col h-[90%]">
             <div
                 ref={outputContainerRef}
                 className="flex-1 overflow-y-scroll mb-2 flex flex-col-reverse"
