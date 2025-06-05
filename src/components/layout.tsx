@@ -11,7 +11,7 @@ export default function Layout() {
             <footer className="text-sm text-gray-400 font-mono">
                 © {new Date().getFullYear()}
                 <a
-                    href="https://github.com/invalidcode232/invalidcode232.github.io"
+                    href="https://www.linkedin.com/in/james-sungarda/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-300 hover:underline hover:text-blue-400 mx-2"
@@ -20,7 +20,7 @@ export default function Layout() {
                 </a>
                 |
                 <a
-                    href="https://github.com/invalidcode232"
+                    href="https://github.com/invalidcode232/invalidcode232.github.io"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-300 hover:underline hover:text-blue-400 mx-2"
