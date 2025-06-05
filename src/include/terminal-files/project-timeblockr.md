@@ -1,3 +1,4 @@
 # Timeblockr
 
-Timeblockr is your mom gay HAHAH
+Timeblockr is an open source timeblocking app.
+Lorem ipsum dolor sit amet.
