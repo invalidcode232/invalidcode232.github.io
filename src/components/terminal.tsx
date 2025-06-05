@@ -6,13 +6,14 @@ export default function Terminal() {
     const PROMPT = "guest@portfolio:~$";
 
     const [input, setInput] = useState("");
+
     const [outputHistory, setOutputHistory] = useState<OutputHistory[]>([]);
     const inputRef = useRef<HTMLInputElement>(null);
     const outputContainerRef = useRef<HTMLDivElement>(null);
 
     const THandler = useMemo(() => {
         const handler = new TerminalHandler(setOutputHistory);
-        handler.sendSystemMessage();
+        // handler.sendSystemMessage();
         return handler;
     }, []);
 
@@ -39,12 +40,12 @@ export default function Terminal() {
     };
 
     return (
-        <div className="max-h-[80vh] overflow-scroll bg-black rounded-lg p-4 text-sm text-gray-200 font-mono mb-4 flex flex-col h-full">
+        <div className="bg-black rounded-lg p-4 text-sm text-gray-200 font-mono mb-2 flex flex-col h-full">
             <div
                 ref={outputContainerRef}
-                className="flex-1 overflow-y-auto mb-2"
+                className="flex-1 overflow-y-scroll mb-2 flex flex-col-reverse"
             >
-                {outputHistory.map((output) => (
+                {outputHistory.reverse().map((output) => (
                     <div key={output.id} className="py-2">
                         {output.prompt !== null && (
                             <span className="block font-semibold">
@@ -62,14 +63,14 @@ export default function Terminal() {
             <form onSubmit={handleSubmit} className="flex-shrink-0">
                 <label
                     htmlFor="terminal-input"
-                    className="text-gray-400 mr-2 w-auto"
+                    className="text-gray-300 mr-2 w-auto"
                 >
                     {PROMPT}
                 </label>
                 <input
                     type="text"
                     name="terminal-input"
-                    className="bg-transparent border-none focus:outline-none w-auto"
+                    className="bg-transparent border-none focus:outline-none w-auto text-white"
                     value={input}
                     onChange={handleInputChange}
                     ref={inputRef}

@@ -3,6 +3,8 @@ export enum Commands {
     CLEAR = "clear",
     ECHO = "echo",
     SYSTEM = "system",
+    LS = "ls",
+    CAT = "cat",
     // other commands
 }
 

@@ -3,6 +3,7 @@ import SYSTEM_MESSAGE, {
     OutputHistory,
     OutputHistoryType,
 } from "./terminal-objects";
+import TFileSystem from "./terminal-fs";
 
 export interface TerminalInput {
     command: Commands;
@@ -44,7 +45,7 @@ class TerminalHandler {
             case Commands.HELP:
                 this.addOutput(
                     input,
-                    "Available commands: help, clear, echo, system",
+                    "Available commands: help, clear, echo, system, ls, cat",
                 );
                 break;
             case Commands.CLEAR:
@@ -60,6 +61,22 @@ class TerminalHandler {
                 break;
             case Commands.SYSTEM:
                 this.addOutput(input, SYSTEM_MESSAGE);
+                break;
+            case Commands.LS:
+                this.addOutput(
+                    input,
+                    TFileSystem.map((file) => file.name).join("\n"),
+                );
+
+                break;
+            case Commands.CAT:
+                const file = TFileSystem.find((file) => file.name === args[0]);
+                if (file) {
+                    this.addOutput(input, file.content);
+                } else {
+                    this.addOutput(input, `File not found: ${args[0]}`);
+                }
+                
                 break;
             default:
                 this.addOutput(input, `Unknown command: ${command}`);
