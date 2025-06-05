@@ -10,10 +10,10 @@ export interface Contact {
 
 const CONTACTS: Contact[] = [
   {
-    name: "Mail",
-    icon: FaEnvelope,
-    text: "mail@invalidcode.me",
-    href: "mailto:mail@invalidcode.me",
+    name: "Linkedin",
+    icon: FaLinkedin,
+    text: "James Sungarda",
+    href: "https://www.linkedin.com/in/james-sungarda/",
   },
   {
     name: "Github",
@@ -22,10 +22,10 @@ const CONTACTS: Contact[] = [
     href: "https://github.com/invalidcode232",
   },
   {
-    name: "Linkedin",
-    icon: FaLinkedin,
-    text: "James Sungarda",
-    href: "https://www.linkedin.com/in/james-sungarda/",
+    name: "Mail",
+    icon: FaEnvelope,
+    text: "mail@invalidcode.me",
+    href: "mailto:mail@invalidcode.me",
   },
 ];
 
