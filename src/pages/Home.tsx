@@ -1,6 +1,7 @@
 import { FaEnvelope, FaFile } from "react-icons/fa6";
 import CONTACTS, { Contact } from "../include/contacts";
 import { Link } from "react-router";
+import ActionButton from "../components/action-button";
 
 function Home() {
     return (
@@ -50,26 +51,19 @@ function Home() {
             </section>
 
             <section className="my-8 flex flex-col items-center md:flex-row md:items-center md:justify-start">
-                <a
-                    className="bg-slate-700 text-white px-6 py-2 rounded-md md:min-w-[200px] min-w-full hover:bg-slate-600 hover:cursor-pointer flex items-center justify-center mb-3 md:mb-0"
-                    aria-label="download cv"
+                <ActionButton
+                    text="Download CV"
                     href="https://github.com/invalidcode232/invalidcode232.github.io/raw/refs/heads/main/public/cv.pdf"
-                    target="_blank"
-                >
-                    <FaFile className="mr-2" />
-                    Download CV
-                </a>
+                    icon={<FaFile />}
+                />
                 <span className="text-gray-500 md:mx-4 md:block hidden">
                     or
                 </span>
-                <a
-                    className="bg-slate-700 text-white px-6 py-2 rounded-md md:min-w-[200px] min-w-full hover:bg-slate-600 hover:cursor-pointer flex items-center justify-center"
-                    aria-label="download cv"
+                <ActionButton
+                    text="Email me"
                     href="mailto:mail@invalidcode.me"
-                >
-                    <FaEnvelope className="mr-2" />
-                    Email me
-                </a>
+                    icon={<FaEnvelope />}
+                />
             </section>
 
             <section aria-label="contact">
@@ -83,7 +77,6 @@ function Home() {
                             key={contact.name}
                             className="mb-1 flex items-center"
                         >
-                            <contact.icon className="mr-2" />
                             <a
                                 href={contact.href}
                                 className="text-blue-400 hover:underline"
