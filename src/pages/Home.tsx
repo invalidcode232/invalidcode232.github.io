@@ -77,6 +77,7 @@ function Home() {
                             key={contact.name}
                             className="mb-1 flex items-center"
                         >
+                            <contact.icon className="mr-2" />
                             <a
                                 href={contact.href}
                                 className="text-blue-400 hover:underline"
