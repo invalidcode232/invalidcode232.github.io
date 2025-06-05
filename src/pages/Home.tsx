@@ -63,6 +63,7 @@ function Home() {
                     text="Email me"
                     href="mailto:mail@invalidcode.me"
                     icon={<FaEnvelope />}
+                    mailto={true}
                 />
             </section>
 
