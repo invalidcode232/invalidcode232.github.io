@@ -10,6 +10,7 @@ const TFileSystem: TFile[] = [
     {
         name: "timeblockr.md",
         content: timeblockrContent,
+        description: "A time tracking app for the terminal",
     }
 ]
 
