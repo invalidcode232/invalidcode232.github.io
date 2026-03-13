@@ -6,7 +6,7 @@ import ActionButton from "../components/action-button";
 function Home() {
   return (
     <>
-      <section className="mb-2" aria-label="greeting">
+      <section className="mb-2 flex flex-col items-center md:block" aria-label="greeting">
         <h1 className="text-3xl font-semibold inline-block mr-3 text-white">
           Hello!
         </h1>
@@ -16,11 +16,11 @@ function Home() {
       </section>
 
       <section
-        className="mb-4 leading-6 lg:max-w-[75%]"
+        className="mb-4 leading-6 lg:max-w-[75%] text-center md:text-left"
         aria-label="introduction"
       >
         <p className="mb-2">
-          I am currently a second year undergraduate student studying
+          I am currently a second-year undergraduate student studying
           Computer Science at
           <a
             href={"https://hku.hk"}
@@ -34,7 +34,7 @@ function Home() {
 
         <p className="mb-4">
           I am interested in all things software development,
-          including machine learning, artificial intelligence, and web
+          as well as machine learning, data science, and web
           development.
         </p>
 
@@ -67,8 +67,8 @@ function Home() {
         />
       </section>
 
-      <section aria-label="contact">
-        <h2 className="text-2xl font-semibold text-white mb-4">
+      <section aria-label="contact" className="md:block flex flex-col items-center">
+        <h2 className="text-xl font-semibold text-white mb-2">
           Contact me
         </h2>
 

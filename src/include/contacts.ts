@@ -24,8 +24,8 @@ const CONTACTS: Contact[] = [
   {
     name: "Mail",
     icon: FaEnvelope,
-    text: "mail@invalidcode.me",
-    href: "mailto:mail@invalidcode.me",
+    text: "mail@sungardajames.com",
+    href: "mailto:mail@sungardajames.com",
   },
 ];
 
