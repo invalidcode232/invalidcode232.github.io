@@ -61,7 +61,7 @@ function Home() {
         </span>
         <ActionButton
           text="Email me"
-          href="mailto:mail@invalidcode.me"
+          href="mailto:mail@sungardajames.com"
           icon={<FaEnvelope />}
           mailto={true}
         />
