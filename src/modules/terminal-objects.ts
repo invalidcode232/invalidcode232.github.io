@@ -1,24 +1,24 @@
 export enum Commands {
-    HELP = "help",
-    CLEAR = "clear",
-    ECHO = "echo",
-    SYSTEM = "system",
-    LS = "ls",
-    CAT = "cat",
-    // other commands
+  HELP = "help",
+  CLEAR = "clear",
+  ECHO = "echo",
+  SYSTEM = "system",
+  LS = "ls",
+  CAT = "cat",
+  // other commands
 }
 
 export enum OutputHistoryType {
-    INFO = "info",
-    ERROR = "error",
-    SUCCESS = "success",
+  INFO = "info",
+  ERROR = "error",
+  SUCCESS = "success",
 }
 
 export interface OutputHistory {
-    id: string;
-    content: string;
-    type: OutputHistoryType;
-    prompt: string | null;
+  id: number;
+  content: string;
+  type: OutputHistoryType;
+  prompt: string | null;
 }
 
 const SYSTEM_MESSAGE = `Welcome to the terminal interface of my portfolio!

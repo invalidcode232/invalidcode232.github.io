@@ -13,7 +13,6 @@ export default function Terminal() {
 
   const THandler = useMemo(() => {
     const handler = new TerminalHandler(setOutputHistory);
-    // handler.sendSystemMessage();
     return handler;
   }, []);
 

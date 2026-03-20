@@ -3,12 +3,12 @@ import Header from "./header";
 
 export default function Layout() {
   return (
-    <div className="h-screen overflow-scroll py-10 2xl:px-72 2xl:pt-100 xl:px-80 xl:pt-16 lg:px-50 md:px-40 px-15 pt-14 flex flex-col bg-slate-900">
+    <div className="h-screen overflow-scroll py-10 2xl:px-72 2xl:pt-100 xl:px-80 xl:pt-16 lg:px-50 md:px-40 px-15 pt-8 mb-0 flex flex-col bg-slate-900">
       <Header />
       <main className="text-gray-200 h-full flex-1">
         <Outlet />
       </main>
-      <footer className="text-sm text-gray-400 font-mono">
+      <footer className="text-sm text-gray-400 font-mono pt-4 md:pt-0">
         © {new Date().getFullYear()}
         <a
           href="https://www.linkedin.com/in/james-sungarda/"
