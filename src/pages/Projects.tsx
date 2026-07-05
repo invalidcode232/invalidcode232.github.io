@@ -1,11 +1,11 @@
 import TFileSystem from "../modules/terminal-fs";
 import type { TFile } from "../modules/terminal-fs";
 
-function Experience() {
+function AboutMe() {
     return (
         <>
             <h1 className="text-4xl font-bold text-white mb-4">
-                My Experience
+                About me
             </h1>
             <h1 className="text-2xl text-white font-semibold mb-2">Projects</h1>
             {TFileSystem.map((file: TFile) => (
@@ -20,4 +20,4 @@ function Experience() {
     );
 }
 
-export default Experience;
+export default AboutMe;

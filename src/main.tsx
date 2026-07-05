@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router";
-import Experience from "./pages/Projects";
+import AboutMe from "./pages/Projects";
 import Home from "./pages/Home";
 import Layout from "./components/layout";
 import "./index.css";
@@ -13,7 +13,7 @@ createRoot(document.getElementById("root")!).render(
             <Routes>
                 <Route element={<Layout />}>
                     <Route index element={<Home />} />
-                    <Route path="/experience" element={<Experience />} />
+                    <Route path="/about-me" element={<AboutMe />} />
                     <Route path="/terminal" element={<TerminalPage />} />
                 </Route>
             </Routes>
