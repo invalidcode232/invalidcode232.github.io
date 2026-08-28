@@ -1,5 +1,6 @@
 import { Outlet } from "react-router";
 import Header from "./header";
+import PageLink from "./link";
 
 export default function Layout() {
   return (
@@ -9,25 +10,20 @@ export default function Layout() {
         <main className="flex min-h-0 flex-1 flex-col overflow-y-auto leading-relaxed text-gray-200">
           <Outlet />
         </main>
-        <footer className="shrink-0 pt-4 font-mono text-sm text-gray-400 md:pt-0">
-          © {new Date().getFullYear()}
-          <a
-            href="https://www.linkedin.com/in/james-sungarda/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mx-2 text-blue-300 hover:text-blue-400 hover:underline"
+        <footer className="shrink-0 pt-4 font-mono text-xs text-gray-400 md:pt-0">
+          © {new Date().getFullYear()} {" "}
+          <PageLink
+            href="/"
           >
             James Sungarda
-          </a>
-          |
-          <a
+          </PageLink>
+          {" | "}
+          <PageLink
             href="https://github.com/invalidcode232/invalidcode232.github.io"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mx-2 text-blue-300 hover:text-blue-400 hover:underline"
+            external={true}
           >
-            GitHub
-          </a>
+            View on GitHub
+          </PageLink>
         </footer>
       </div>
     </div>

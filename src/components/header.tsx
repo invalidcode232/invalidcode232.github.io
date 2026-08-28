@@ -14,7 +14,7 @@ export default function Header() {
                     isPath
                     hideMobile
                 />
-                <NavigationLink href={"/about-me"} text={"About me"} isPath />
+                <NavigationLink href={"/about"} text={"About"} isPath />
             </nav>
         </header>
     );

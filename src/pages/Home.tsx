@@ -1,7 +1,7 @@
 import { FaEnvelope, FaFile } from "react-icons/fa6";
 import CONTACTS, { Contact } from "../include/contacts";
-import { Link } from "react-router";
 import ActionButton from "../components/action-button";
+import PageLink from "../components/link";
 
 function Home() {
     return (
@@ -12,36 +12,40 @@ function Home() {
             </section>
 
             <section
-                className="mb-4 text-center leading-relaxed md:text-left"
+                className="mb-4 text-center leading-relaxed flex flex-col gap-y-4 md:text-left"
                 aria-label="introduction"
             >
-                <p className="mb-2">
-                    I am currently a second-year undergraduate student studying Computer Science at
-                    <a
+                <p >
+                    I am currently a junior year undergraduate student studying Computer Science at{" "}
+                    <PageLink
                         href={"https://hku.hk"}
-                        className="text-blue-400 no-underline hover:underline ml-1"
-                        target="_blank"
+                        external={true}
                     >
-                        The University of Hong Kong
-                    </a>
+                            The University of Hong Kong
+                    </PageLink>
                     .
                 </p>
 
-                <p className="mb-4">
+                <p>
                     I am interested in all things software development, as well as machine learning, data
                     science, and web development.
                 </p>
+            </section>
+
+            <section className="flex flex-col gap-y-2 mb-6">
+                <h2 className="text-lg font-semibold text-white mb-2">Other Stuff</h2>
+                <p>
+                    I maintain <PageLink href="https://blog.sungardajames.com" external={true}>coffee_thoughts</PageLink>, my personal blog containing thoughts and essays on various topics.
+                </p>
 
                 <p>
-                    Want to know more about me? Check out my{" "}
-                    <Link to="/terminal" className="text-blue-400 hover:underline no-underline">
-                        interactive terminal
-                    </Link>
+                    Feel free to explore my{" "}
+                    <PageLink href="/terminal">interactive terminal</PageLink>
                     .
                 </p>
             </section>
 
-            <section className="my-8 flex flex-col items-center md:flex-row md:items-center md:justify-start">
+            <section className="flex flex-col items-center mb-6 md:flex-row md:items-center md:justify-start">
                 <ActionButton
                     text="Download CV"
                     href="https://github.com/invalidcode232/invalidcode232.github.io/raw/refs/heads/main/public/cv.pdf"
