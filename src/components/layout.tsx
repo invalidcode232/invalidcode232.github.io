@@ -3,13 +3,13 @@ import Header from "./header";
 
 export default function Layout() {
   return (
-    <div className="h-dvh overflow-x-hidden overflow-y-auto bg-slate-900">
-      <div className="mx-auto flex min-h-full w-full max-w-3xl flex-col px-8 py-8 md:px-12 md:py-10 2xl:max-w-4xl 2xl:pt-12">
+    <div className="flex h-dvh flex-col overflow-hidden bg-slate-900">
+      <div className="mx-auto flex h-full w-full max-w-3xl flex-col px-8 py-8 md:px-12 md:py-10 2xl:max-w-4xl 2xl:pt-12">
         <Header />
-        <main className="min-h-0 flex-1 leading-relaxed text-gray-200">
+        <main className="flex min-h-0 flex-1 flex-col overflow-y-auto leading-relaxed text-gray-200">
           <Outlet />
         </main>
-        <footer className="pt-4 font-mono text-sm text-gray-400 md:pt-0">
+        <footer className="shrink-0 pt-4 font-mono text-sm text-gray-400 md:pt-0">
           © {new Date().getFullYear()}
           <a
             href="https://www.linkedin.com/in/james-sungarda/"

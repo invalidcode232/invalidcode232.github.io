@@ -3,7 +3,7 @@ import NavigationLink from "../components/navigation-link.tsx";
 
 export default function Header() {
     return (
-        <header className="w-full flex justify-between items-center mb-10 text-white">
+        <header className="mb-10 flex w-full shrink-0 items-center justify-between text-white">
             <span className="text-3xl inline-block align-middle">
                 <Link to="/">James Sungarda</Link>
             </span>
